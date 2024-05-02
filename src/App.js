@@ -7,15 +7,28 @@ function App() {
 
   const [shoppingList, setShoppingList] = useState([]);
 
-  useEffect(() => {
+  function loadData() {
     fetch("https://2z3tx8-8080.csb.app/api/list")
-      .then(x => x.json())
-      .then(response => {
+      .then((x) => x.json())
+      .then((response) => {
         setShoppingList(response);
-      })
-  }, []);
+      });
+  }
 
-  console.log(shoppingList);
+  useEffect(loadData,[]);
+
+  function addItem(item, quantity) {
+    fetch("https://2z3tx8-8080.csb.app/api/list/new", {
+      method: "POST",
+      body: JSON.stringify({ item, quantity }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      mode: "cors",
+    })
+      .then(x => x.json())
+      .then(loadData);
+  }
 
   return (
     <div className="App">
@@ -23,7 +36,7 @@ function App() {
         <h1>Shopping List</h1>
       </header>
       <main>
-        <ShoppingForm />
+        <ShoppingForm addItem={addItem} />
         <ShoppingList items={shoppingList} />
       </main>
     </div>
