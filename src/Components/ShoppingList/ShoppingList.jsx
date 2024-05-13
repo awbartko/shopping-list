@@ -1,4 +1,5 @@
 import React from 'react';
+import './ShoppingList.css';
 
 function ShoppingItem({ id, item, quantity, deleteItem }) {
 
@@ -8,9 +9,9 @@ function ShoppingItem({ id, item, quantity, deleteItem }) {
     }
 
     return (
-        <li>
+        <li className="shopping-item-container">
             <span>{item} ({quantity})</span>
-            <button onClick={handleDelete}>Delete</button>
+            <button className="delete-button" onClick={handleDelete}>Delete</button>
         </li>
     );
 }
@@ -27,5 +28,5 @@ export default function ShoppingList({ items, deleteItem }) {
         />
     );
 
-    return <ul>{ ItemsJsx }</ul>;
+    return <ul className="shopping-list-container">{ ItemsJsx }</ul>;
 }

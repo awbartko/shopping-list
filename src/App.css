@@ -1,3 +1,21 @@
 .App {
   text-align: center;
 }
+
+.App-header {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+.logo {
+  width: 500px;
+  height: 300px;
+  align-items: left;
+  background-repeat: no-repeat;
+
+}
+
+.App-title{
+  text-align: right;
+}

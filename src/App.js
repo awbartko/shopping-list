@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import "./../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import ShoppingForm from './Components/ShoppingForm/ShoppingForm';
 import ShoppingList from './Components/ShoppingList/ShoppingList';
 
@@ -45,8 +44,10 @@ function App() {
 
   return (
     <div className="App">
+    <div className="bg"></div>
       <header className="App-header">
-        <h1>Shopping List</h1>
+        <h1 className="App-title">Shopping List</h1>
+        <img src="./images/groceries.png" className="logo"/>
       </header>
       <main>
         <ShoppingForm addItem={addItem} />
