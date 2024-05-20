@@ -44,12 +44,10 @@ function App() {
 
   return (
     <div className="App">
-    <div className="bg"></div>
       <header className="App-header">
         <h1 className="App-title">Shopping List</h1>
-        <img src="./images/groceries.png" className="logo"/>
       </header>
-      <main>
+      <main className="main">
         <ShoppingForm addItem={addItem} />
         <ShoppingList items={shoppingList} deleteItem={deleteItem} />
       </main>

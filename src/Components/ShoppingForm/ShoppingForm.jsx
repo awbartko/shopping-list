@@ -38,7 +38,7 @@ export default function ShoppingForm({ addItem }) {
                     required
                     min="0"
                     onChange={handleQuantityChange} />
-                <button className="add-button" type="submit">Add</button>
+                <button className="add-button" type="submit">Add to Cart</button>
         </form>
     );
 }

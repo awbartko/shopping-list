@@ -1,21 +1,41 @@
 .App {
   text-align: center;
+  height: 100vh;
+  position: relative;
 }
 
-.App-header {
-  display: flex;
-  justify-content: center;
-  align-items: left;
-}
-
-.logo {
-  width: 500px;
-  height: 300px;
-  align-items: left;
+.App::before {
+  background-image: url('./images/groceries.png');
   background-repeat: no-repeat;
-
+  background-position: left bottom;
+  background-size: cover;
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.20;
 }
 
-.App-title{
-  text-align: right;
+.main {
+  isolation: isolate;
+}
+
+.App-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: .5px;
+  isolation: isolate;
+  font-size: 60px;
+  background-color: #e0f2f5;
+  font-weight: 450;
+  color: #3a3a3a;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.formWrapper {
+  max-width: 80%;
+  height: 500px;
+  display: flex;
+  margin-top: 80px;
 }
