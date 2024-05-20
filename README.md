@@ -1,6 +1,7 @@
 # Shopping List
 
 Hosting: https://awbartko.github.io/shopping-list/
+Server Link: https://codesandbox.io/p/devbox/node-shopping-list-app-2z3tx8?file=%2Fpackage.json%3A10%2C23
 
 Amber Bartko
 
